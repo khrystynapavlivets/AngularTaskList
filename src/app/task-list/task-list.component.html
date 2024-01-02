@@ -1,0 +1,9 @@
+<div class="container">
+    <h1>Plan your day!</h1>
+    <h2 class="TaskCount">User: {{user}}. Count of Tasks {{count}}</h2>
+    <div class="newTask">
+        <input class="newTaskInput" [(ngModel)]="taskName" />
+        <input type="button" class="newTaskAdd" value="Add" (click)="addTask()">
+    </div>
+    <app-child [newTask]="newTask" (taskDeleted)="onTaskDeleted($event)"></app-child>
+</div>

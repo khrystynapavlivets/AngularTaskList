@@ -1,0 +1,125 @@
+$red: rgb(237, 45, 45);
+$dark-red: rgb(212, 7, 7);
+$light-red: rgb(226, 65, 65);
+$lightcoral: rgba(249, 156, 170, 0.5);
+$lightorange: rgb(253, 216, 147);
+$orange: rgba(255, 173, 22, 0.938);
+$dark-orange: rgb(253, 216, 147);
+$light-orange: rgb(243, 173, 42);
+$white: rgb(255, 255, 255);
+$gray-border: rgb(189, 181, 181);
+$gray: rgb(109, 108, 108);
+$light-gray: #f5f5f5;
+$green: rgb(19, 150, 52);
+$green-hover: rgb(15, 118, 41);
+$dark-green: rgba(16, 100, 38, 0.884);
+
+table {
+    width: 100%;
+    margin: 1.25rem auto;
+    border-collapse: collapse;
+
+
+    tr,
+    th,
+    td {
+        border-bottom: 1px solid $gray-border;
+        border-top: 1px solid $gray-border;
+        padding: 1rem;
+        text-align: start;
+        font-size: 1.3rem;
+    }
+
+    tbody tr:hover {
+        background-color: $light-gray;
+    }
+
+    button {
+        border: 2px solid $gray-border;
+        border-radius: .5rem;
+        padding: .5rem;
+        font-size: 1rem;
+        cursor: pointer;
+
+        &.edit-btn {
+            width: 4rem;
+            background-color: $orange;
+            border-color: $orange;
+            color: #000;
+
+            &:focus {
+                font-weight: bold;
+                outline: .25rem solid $dark-orange;
+            }
+
+            &:not(:disabled):hover {
+                font-weight: bold;
+                outline: .20rem solid $dark-orange;
+                background-color: $light-orange;
+            }
+
+            &:disabled {
+
+                border-color: transparent;
+                background-color: $lightorange;
+                cursor: not-allowed;
+            }
+        }
+
+        &.delite-btn {
+            width: 5rem;
+            background-color: $red;
+            border-color: $red;
+            color: $white;
+
+            &:focus {
+                outline: .25rem solid $dark-red;
+                font-weight: bold;
+            }
+
+            &:not(:disabled):hover {
+                font-weight: bold;
+                outline: .20rem solid $red;
+                background-color: $light-red;
+            }
+
+            &:disabled {
+                border-color: transparent;
+                background-color: $lightcoral;
+                cursor: not-allowed;
+            }
+        }
+
+        &.editTaskBtn {
+            width: 4rem;
+            color: $white;
+            border: 1px solid $dark-green;
+            background-color: $green;
+
+            &:hover {
+                font-weight: bold;
+                outline: 2px solid rgba(77, 150, 88, 0.921);
+                background-color: $green-hover;
+            }
+
+            &:focus {
+                font-weight: bold;
+                outline: 4px solid rgba(77, 150, 88, 0.921);
+                background-color: rgb(9, 151, 9);
+            }
+        }
+
+
+
+    }
+
+    .editTaskInput {
+        width: 200px;
+        height: 35px;
+        border-radius: 5px;
+        border: 1px solid $gray-border;
+        outline: none;
+        font-size: 20px;
+
+    }
+}
